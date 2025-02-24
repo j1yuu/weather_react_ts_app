@@ -1,4 +1,6 @@
-export const ru = {
+import { textFile } from "./types"
+
+export const ru: textFile = {
     name: "WeatherApp",
     MAIN: {
         subtext: "Небольшое веб-приложение, сделанное с помощью React+Typescript",
@@ -46,7 +48,7 @@ export const ru = {
     NO_CITY: "Город не выбран"
 }
 
-export const en = {
+export const en: textFile = {
     name: "WeatherApp",
     MAIN: {
         subtext: "Small frontend web-application made w/ React+Typescript",

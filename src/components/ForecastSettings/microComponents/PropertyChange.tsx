@@ -1,4 +1,3 @@
-import { property } from "../../../entities/types"
 import { useUserForecastContext } from "../../providers/ForecastProvider"
 import { useUserLangContext } from "../../providers/LanguageProvider"
 

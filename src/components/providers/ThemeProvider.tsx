@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { IThemeContext, theme } from "../../entities/types";
 
 
-export const ThemeProvider = createContext<IThemeContext>({theme: "light", toggleTheme: (theme: theme) => {}})
+export const ThemeProvider = createContext<IThemeContext>({theme: "light", toggleTheme: () => {}})
 
 export default function UserThemeContext({children} : {children: React.ReactNode}) {
     const [theme, setTheme] = useState<theme>("dark")

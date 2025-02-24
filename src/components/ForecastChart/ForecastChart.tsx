@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react"
 import { useUserForecastContext } from "../providers/ForecastProvider"
 import useWindowSize from "../providers/useWindowResize"
-import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
+import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts"
 import { useUserLangContext } from "../providers/LanguageProvider"
-import { ForecastItem, IForecast } from "../../entities/types"
-import getRandomArrayItem from "../../utils/getRandomArrayItem"
-import { HEX_COLORS } from "../../entities/texts"
+import { IForecast } from "../../entities/types"
 
 export default function ForecastChart() {
     const [chartSizes, setChartSizes] = useState([800, 400])
     
     const {forecast, userSettings} = useUserForecastContext()
     const {lang} = useUserLangContext()
-    const [width, height] = useWindowSize()
+    const [width, _] = useWindowSize()
 
     useEffect(() => {
         if (width < 768 && width >=  548) {

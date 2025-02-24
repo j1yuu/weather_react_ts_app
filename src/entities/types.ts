@@ -106,7 +106,7 @@ export type textFile = {
         d_5: string,
         h_3: string,
         switch_property: string,
-        properties: Record<string, property>[]
+        properties: {text: string, stands_for: property}[]
     },
     FOOTER: {
         source_code: string,

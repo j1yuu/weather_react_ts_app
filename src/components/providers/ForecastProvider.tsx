@@ -1,13 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-import { GeocodingCity, IForecast, IForecastContext, IRequestsResult, IUserSettings, property, WeatherResponse } from "../../entities/types";
+import { GeocodingCity, IForecast, IForecastContext, IRequestsResult, IUserSettings, WeatherResponse } from "../../entities/types";
+import { mockForecast } from "../../entities/mockObjects";
+import { HEX_COLORS } from "../../entities/texts";
 
 import getCity from "../../utils/getCity";
 import getWeather from "../../utils/getWeather";
 import convertKalvinToCelsium from "../../utils/covertKalvinToCelsium";
-import { mockForecast } from "../../entities/mockObjects";
 import getRandomArrayItem from "../../utils/getRandomArrayItem";
-import { HEX_COLORS } from "../../entities/texts";
 
 /**
  * ForecastContext - интерфейс ReactContext для управления информацией о городах и прогнозах погоды для них.
@@ -70,8 +70,8 @@ export default function UserForecastContext({
 
     function removeCity(city: GeocodingCity) {
         const index = cities.findIndex(obj => obj.name === city.name)
-        setCities(prev => prev.filter((el, i) => i !== index))
-        setData(prev => prev.filter((el, i) => i !== index))
+        setCities(prev => prev.filter((_, i) => i !== index))
+        setData(prev => prev.filter((_, i) => i !== index))
     }
 
     function resetCities() {

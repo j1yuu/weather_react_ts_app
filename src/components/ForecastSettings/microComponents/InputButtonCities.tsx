@@ -1,11 +1,10 @@
 import { useState } from "react"
 import { useUserLangContext } from "../../providers/LanguageProvider"
 import { useUserForecastContext } from "../../providers/ForecastProvider"
-import { GeocodingCity } from "../../../entities/types"
 
 export default function InputButtonCities() {
     const [city, setCity] = useState("")
-    const [loading, setLoading] = useState(false)
+    const [_, setLoading] = useState(false)
     const [error, setError] = useState("")
     
     const {textFile, lang} = useUserLangContext()
