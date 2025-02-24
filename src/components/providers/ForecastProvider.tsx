@@ -91,8 +91,15 @@ export default function UserForecastContext({
                 let forecastCities: IForecast["cities"] = []
                 for (let i = 0; i < data.length; i++) {
                     const forecastDateData = data[i].list[n]
+                    
+                    const engName = cities[i].local_names?.["en"]
+                    const ruName = cities[i].local_names?.["ru"]
+
                     forecastCities.push({
-                        name: cities[i].local_names,
+                        name: {
+                            "en": engName ? engName : cities[i].name,
+                            "ru": ruName ? ruName : cities[i].name
+                        },
                         properties: {
                             temperature: convertKalvinToCelsium(forecastDateData.main.temp),
                             pressure: Math.floor(forecastDateData.main.pressure / 1.333),

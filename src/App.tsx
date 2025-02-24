@@ -11,8 +11,8 @@ function App() {
   return (
     <div className={`bg-[#F9F9FA] min-h-[100vh] text-black`}>
       <Routes>
-        <Route path='/' element={<Main/>}/>
-        <Route path="/forecast" element={<Forecast/>}/>
+        <Route index element={<Main/>}/>
+        <Route path="forecast" element={<Forecast/>}/>
       </Routes>
       <Settings/>
       <Footer/>

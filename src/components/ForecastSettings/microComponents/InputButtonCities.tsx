@@ -50,7 +50,9 @@ export default function InputButtonCities() {
                         onClick={() => {removeCity(el)}}
                         className="bg-[transparent] text-black text-xs hover:text-[#f9f9fa!important] hover:bg-[#c63442] border-1 border-[#c63442] transition-colors px-3 py-1.5 rounded-full"
                     >
-                    {el.local_names?.[lang]+""} &#10006;</button>
+                    {el.local_names?
+                        el.local_names[lang] : el.name
+                    } &#10006;</button>
                 ))}
             </div>
         </div>
