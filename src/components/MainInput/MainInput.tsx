@@ -33,6 +33,7 @@ export default function MainInput() {
     return (
         <div className="flex flex-col">
             <input
+                onKeyDown={(e) => {e.key === "Enter" ? onClick() : ""}}
                 onChange={e => setCity(e.target.value)}
                 className="w-80 border-2 outline-0 mb-4 px-3 py-2 rounded-full transition-all border-[#6E78A6] text-[#0F0F0A] focus:border-[#0F0F0A]" 
                 placeholder={textFile.MAIN.placeholder}

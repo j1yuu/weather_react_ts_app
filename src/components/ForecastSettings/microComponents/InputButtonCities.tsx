@@ -29,10 +29,11 @@ export default function InputButtonCities() {
 
     return (
         <div className="mb-6 w-full">
-            <p className="text-black text-[16] mb-3 max-lg:text-center">{textFile.FORECAST.add_city}</p>
+            <p className="text-black text-[16px] mb-3 max-lg:text-center">{textFile.FORECAST.add_city}</p>
             <div className="flex items-center gap-3 mb-3 max-lg:justify-center">
                 <input 
                     onChange={e => setCity(e.target.value)}
+                    onKeyDown={(e) => {e.key === "Enter" ? onClick() : ""}}
                     value={city}
                     className="lg:w-44 max-lg:w-full border-2 text-xs outline-0 px-3 py-2 rounded-full transition-all border-[#6E78A6] text-[#0F0F0A] focus:border-[#0F0F0A]" 
                     placeholder={textFile.MAIN.placeholder}
@@ -47,9 +48,9 @@ export default function InputButtonCities() {
                     <button
                         key={i}
                         onClick={() => {removeCity(el)}}
-                        className="bg-[#7384CE] px-3 py-1.5 text-xs text-white rounded-full"
+                        className="bg-[transparent] text-black text-xs hover:text-[#f9f9fa!important] hover:bg-[#c63442] border-1 border-[#c63442] transition-colors px-3 py-1.5 rounded-full"
                     >
-                    {el.local_names?.[lang]+""}</button>
+                    {el.local_names?.[lang]+""} &#10006;</button>
                 ))}
             </div>
         </div>

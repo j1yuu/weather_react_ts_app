@@ -5,6 +5,7 @@ import Forecast from './pages/Forecast'
 
 import './App.css'
 import Footer from './components/Footer/Footer'
+import Settings from './components/Settings'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Main/>}/>
         <Route path="/forecast" element={<Forecast/>}/>
       </Routes>
+      <Settings/>
       <Footer/>
     </div>
   )

@@ -40,7 +40,7 @@ export const ru: textFile = {
     FOOTER: {
         source_code: "Исходный код доступен здесь",
         source_link: "https://github.com/j1yuu/weather_react_ts_app/tree/main",
-        made_by: "Сделано Кашиным Константином",
+        made_by: "Сделано Константином Кашиным",
         year: "2025"
     },
     CITY_ERROR: "Возникла ошибка при попытке получить информацию о городе.",

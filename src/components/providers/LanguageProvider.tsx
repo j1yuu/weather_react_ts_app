@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { ILangContext, lang, textFile } from "../../entities/types";
 import { en, ru } from "../../entities/texts";
 
@@ -15,8 +15,19 @@ export default function UserLangContext({children} : {children: React.ReactNode}
 
     function toggleLanguage(lang: lang) {
         setLang(lang)
-        setTextFile(ru)
+        switch(lang) {
+            case "ru":
+                setTextFile(ru)
+                break;
+            case "en":
+                setTextFile(en)
+                break;
+        }
     }
+
+    useEffect(() => {
+
+    }, [lang])
 
     return (
         <LanguageProvider.Provider value={{
