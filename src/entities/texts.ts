@@ -39,7 +39,7 @@ export const ru: textFile = {
     },
     FOOTER: {
         source_code: "Исходный код доступен здесь",
-        source_link: "",
+        source_link: "https://github.com/j1yuu/weather_react_ts_app/tree/main",
         made_by: "Сделано Кашиным Константином",
         year: "2025"
     },
@@ -87,7 +87,7 @@ export const en: textFile = {
     },
     FOOTER: {
         source_code: "Source code is avaliable here",
-        source_link: "",
+        source_link: "https://github.com/j1yuu/weather_react_ts_app/tree/main",
         made_by: "Made by Konstantin Kashin",
         year: "2025"
     },

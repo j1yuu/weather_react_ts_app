@@ -13,7 +13,7 @@ export default function Header() {
                 <span>{textFile.name.slice(7, 10)}</span>
                 <img className="md:w-9 md:h-9 max-md:w-6 md:mt-1.5" src="/cloud_sun.svg"/>
             </Link>
-            <a href="" target="_blank" className="max-md:hidden">funny <span className="text-[#6E78A6]">cat</span> image</a>
+            <a href="https://i.pinimg.com/736x/1b/ec/d8/1becd8b948beea5e81f984b7b190537a.jpg" target="_blank" className="max-md:hidden">funny <span className="text-[#6E78A6]">cat</span> image</a>
             <p className="text-[16px] font-medium">
                 {cities.length ? (
                     cities[0].local_names?.[lang] + (cities.length > 1 ? ` +${cities.length - 1}` : "")
