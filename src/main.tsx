@@ -10,12 +10,12 @@ import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
-        <UserLangContext>
-          <UserForecastContext>
+      <UserLangContext>
+        <UserForecastContext>
+          <BrowserRouter>
             <App />
-          </UserForecastContext>
-        </UserLangContext>
-    </BrowserRouter>
+          </BrowserRouter>
+        </UserForecastContext>
+      </UserLangContext>
   </StrictMode>
 )
