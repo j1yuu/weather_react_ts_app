@@ -12,6 +12,7 @@ export default function InputButtonCities() {
     
     async function onClick() {
         setLoading(true)
+        setError("")
 
         const data = await getData(city).then(res => res)
 
@@ -55,6 +56,7 @@ export default function InputButtonCities() {
                     } &#10006;</button>
                 ))}
             </div>
+            {error? (<span className="mt-2.5 text-[10px] text-red-600">{error}</span>) : (<></>)}
         </div>
     )
 }

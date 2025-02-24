@@ -49,7 +49,7 @@ export default function UserForecastContext({
                                                         result = {complete: true, error: "CITY"}
                                                         return err
                                                     })
-        if (response.length) {
+        if (response.length && (!cities.find(el => el.name === response[0].name))) {
             const weather = await getWeather(response[0].lat, response[0].lon)
                                                     .then(res => res.data)
                                                     .catch(err => {
